@@ -16,7 +16,7 @@ use Dingo\Api\Routing\Router;
 /** @var Router $api */
 $api = app(Dingo\Api\Routing\Router::class);
 
-$api->version('v1', ['middlware' => 'api', 'namespace' => 'App\Http\Controllers'], function (Router $api) {
+$api->version('v1', ['middlware' => 'api', 'namespace' => 'App\Http\Controllers\Api\v1'], function (Router $api) {
 
     /* AUTH */
     $api->post('auth/login', 'AuthController@login');
